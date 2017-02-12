@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.10.0",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.6",
+    "typings": "^2.1.0",
+    "vue": "^2.1.10",
+    "vue-loader": "^10.3.0",
+    "vue-template-compiler": "^2.1.10",
+    "webpack": "^2.2.1"
+  },
+  "name": "WTV",
+  "version": "1.0.0",
+  "description": "What The View",
+  "main": "index.js",
+  "repository": {},
+  "author": "Gagan Jakhotiya",
+  "license": "MIT"
+}
