@@ -1,15 +1,13 @@
 <template>
     <div class="wrapper">
         <Background/>
-        <img src="../assets/logo.jpg">
+        <img src="https://avatars3.githubusercontent.com/u/13931744">
         <h1>{{ title }}</h1>
         <p>{{ msg }}</p>
-        <h2>Links</h2>
-        <ul>
-            <li v-for="link in links">
-                <a target="_blank" :href="link.url">{{link.title}}</a>
-            </li>
-        </ul>
+        <span v-for="link in links">
+            <a target="_blank" :href="link.url">{{link.title}}</a>
+            <span v-if="links.indexOf(link) !== links.length - 1"> | </span>
+        </span>
     </div>
 </template>
 
@@ -50,10 +48,25 @@ export default {
 
 <style scoped>
 div.wrapper {
-    margin: auto;
+    margin: 0 auto;
     padding: 50px 100px;
     color: #333; 
 }
+
+@-webkit-keyframes multiply {
+    from { opacity: 0 }
+    25% { opacity: .1 }
+    50% { opacity: .2 }
+    to { opacity: 1 }
+}
+
+@-moz-keyframes multiply {
+    from { opacity: 0 }
+    25% { opacity: .1 }
+    50% { opacity: .2 }
+    to { opacity: 1 }
+}
+
 img {
     height: 200px;
     width: 200px;
@@ -61,5 +74,22 @@ img {
     margin-bottom: 20px;
     -webkit-animation: multiply 1500ms ease;
     -moz-animation: multiply 1500ms ease;
+}
+</style>
+
+<style>
+html {
+	font: 100%/1.5 "Roboto", Verdana, sans-serif;
+	font-weight: lighter;
+	color: #884745;
+	overflow-x: hidden;
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	margin: auto;
+	padding: 100px 30px 0px;
+	text-align: center;
 }
 </style>

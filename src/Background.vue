@@ -3,6 +3,16 @@
 </template>
 
 <style scoped>
+@-webkit-keyframes hue {
+    from { -webkit-filter: hue-rotate(0deg) }
+    to { -webkit-filter: hue-rotate(-360deg) }
+}
+
+@-moz-keyframes hue {
+    from { -webkit-filter: hue-rotate(0deg) }
+    to { -webkit-filter: hue-rotate(-360deg) }
+}
+
 .backdrop{
     position: fixed;
 	top: 0px;
